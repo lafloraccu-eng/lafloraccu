@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>La Flora Co-operative Credit Union | Empowering Financial Futures</title>
+    <!-- Font Awesome 6 (Free CDN) for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display for elegance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafaf5;
+            color: #1f2e1c;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* nature-inspired palette */
+        :root {
+            --forest: #1f5e2f;
+            --moss: #3a7c44;
+            --sage: #d2e0cf;
+            --cream: #fef9ef;
+            --dark-text: #1f2a1b;
+            --soft-gray: #f4f4ef;
+            --white: #ffffff;
+            --shadow-sm: 0 12px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 35px rgba(0, 0, 0, 0.08);
+            --border-radius: 1.25rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.75rem;
+        }
+
+        /* header / navbar */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e2e6df;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--forest);
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            letter-spacing: -0.3px;
+        }
+
+        .logo span {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #5a6e52;
+            display: block;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3a28;
+            font-weight: 500;
+            margin-left: 1.8rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--forest);
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(120deg, #faf8f0 0%, #eef3e9 100%);
+            padding: 3.5rem 0 3rem 0;
+            border-bottom: 1px solid #dee6d8;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content .badge {
+            background: var(--forest);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1e3b24;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #3a4d34;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* cards */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #1e3b24;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--forest);
+            margin: 0.7rem auto 0;
+            border-radius: 5px;
+        }
+
+        .grid-2 {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem 1.8rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex: 1;
+            min-width: 250px;
+            border: 1px solid #eef1e9;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            font-size: 2.3rem;
+            color: var(--forest);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: #1f482a;
+        }
+
+        .card p, .card li {
+            color: #2f3e2b;
+        }
+
+        /* core values grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: all 0.2s;
+            border-left: 5px solid var(--forest);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+            background: #ffffffea;
+        }
+
+        .value-card i {
+            font-size: 2rem;
+            color: var(--forest);
+            margin-bottom: 0.8rem;
+        }
+
+        .value-card h4 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: #1e4229;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: #3b4e35;
+            margin-bottom: 0.6rem;
+        }
+
+        .ica-tag {
+            font-size: 0.7rem;
+            background: #eef3ea;
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 50px;
+            color: #2b5c2f;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .objectives-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .obj-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5ede0;
+        }
+
+        .obj-item i {
+            font-size: 1.4rem;
+            color: var(--forest);
+            margin-top: 0.2rem;
+        }
+
+        .obj-item p {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1f3a1f;
+        }
+
+        .ica-principles {
+            background: #eef3ea;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .ica-principles p {
+            font-size: 0.85rem;
+            color: #2b4f28;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #1d2c1a;
+            color: #cddec7;
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            margin: 0.3rem 0;
+            font-size: 0.85rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.8rem;
+            border: 1.5px solid var(--forest);
+            border-radius: 40px;
+            color: var(--forest);
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: var(--forest);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                margin-top: 0.8rem;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .card h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <div>
+                <h1>La Flora CCU</h1>
+                <span>Co-operative Credit Union Ltd.</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#mission">Mission</a>
+            <a href="#vision">Vision</a>
+            <a href="#values">Core Values</a>
+            <a href="#objectives">Objectives</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <div class="badge"><i class="fas fa-hand-holding-heart"></i> Since 1971 · 55 years of trust</div>
+        <h2>Where savings bloom &<br> community grows stronger</h2>
+        <p>Bridging 55 years of cooperative heritage with a modern, digital future — always putting members first.</p>
+        <!-- Become a member button now linked to the Google Form -->
+        <a href="https://forms.gle/LqPtGxWHKP85vdc36" class="btn-outline" target="_blank" rel="noopener noreferrer"><i class="fas fa-users"></i> Become a member</a>
+    </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="section" id="mission">
+    <div class="container">
+        <div class="grid-2">
+            <!-- Mission Card -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Our Mission</h3>
+                <p style="font-size: 1.05rem; font-weight: 500;">“We protect our members' money with honesty, embrace new technology, and serve the La Flora community with an open heart.”</p>
+                <p style="margin-top: 1rem; color: #3f5c38;">Every day, we combine integrity, innovation, and genuine care to empower the financial lives of our members.</p>
+            </div>
+            <!-- Vision Card -->
+            <div class="card" id="vision">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Our Vision</h3>
+                <p style="font-size: 1.05rem; font-weight: 500;">“To be a modern society for our members' thrift and savings, bridging our 55-year history with a digital future.”</p>
+                <p style="margin-top: 1rem;">Honouring our legacy while embracing tomorrow’s technology — a credit union that evolves with you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Values Section (aligned with ICA & mission/objectives) -->
+<section class="section" id="values" style="background: #f6f8f2;">
+    <div class="container">
+        <div class="section-title">Our Core Values</div>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto; color: #2d4a28;">Rooted in the principles of the International Co-operative Alliance and driven by our commitment to thrift, fairness, and member empowerment.</p>
+        
+        <div class="values-grid">
+            <!-- Value 1: Thrift & Savings Empowerment -->
+            <div class="value-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h4>Thrift & Savings Culture</h4>
+                <p>Encouraging regular savings and responsible financial habits. We build security by helping members grow their savings and access fair credit, directly supporting our core objective to promote thrift.</p>
+                <div class="ica-tag"><i class="fas fa-handshake"></i> ICA: Self-help & Self-responsibility</div>
+            </div>
+            <!-- Value 2: Fair & Responsible Credit -->
+            <div class="value-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h4>Fair & Responsible Lending</h4>
+                <p>Loans at reasonable rates for provident and productive purposes. We believe credit should be a tool for upliftment, not burden — transparent, equitable, and accessible.</p>
+                <div class="ica-tag"><i class="fas fa-scale-balanced"></i> ICA: Equity & Solidarity</div>
+            </div>
+            <!-- Value 3: Member Ownership & Democratic Control -->
+            <div class="value-card">
+                <i class="fas fa-users-between"></i>
+                <h4>Member Control & Ownership</h4>
+                <p>Members use and control their money for mutual benefit. Every voice matters, and we operate democratically, raising funds through shares, deposits, and responsible instruments.</p>
+                <div class="ica-tag"><i class="fas fa-vote-yea"></i> ICA: Democracy & Equality</div>
+            </div>
+            <!-- Value 4: Honesty & Transparency -->
+            <div class="value-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Honesty & Transparency</h4>
+                <p>We protect members’ money with uncompromising honesty, openness in operations, and clear communication. Trust is our currency.</p>
+                <div class="ica-tag"><i class="fas fa-eye"></i> ICA: Honesty, Openness, Ethical Values</div>
+            </div>
+            <!-- Value 5: Digital Modernization & Innovation -->
+            <div class="value-card">
+                <i class="fas fa-microchip"></i>
+                <h4>Digital Future & Innovation</h4>
+                <p>Embracing new technology to modernise services, offer convenience, and bridge our 55-year history with seamless digital experiences. Financially inclusive tech for all.</p>
+                <div class="ica-tag"><i class="fas fa-robot"></i> ICA: Education, Training & Information</div>
+            </div>
+            <!-- Value 6: Community Solidarity & Social Responsibility -->
+            <div class="value-card">
+                <i class="fas fa-leaf"></i>
+                <h4>Community Solidarity</h4>
+                <p>Serving the La Flora community with an open heart, caring for local needs, and fostering mutual aid. Our success is shared with the neighbourhood we call home.</p>
+                <div class="ica-tag"><i class="fas fa-heart"></i> ICA: Social Responsibility & Caring for Others</div>
+            </div>
+            <!-- Value 7: Equity & Inclusion -->
+            <div class="value-card">
+                <i class="fas fa-equals"></i>
+                <h4>Equity & Inclusion</h4>
+                <p>Equal access to financial services regardless of background. We break barriers and ensure every member is treated with fairness and dignity.</p>
+                <div class="ica-tag"><i class="fas fa-people-arrows"></i> ICA: Equality & Equity</div>
+            </div>
+        </div>
+
+        <!-- explicit ICA alignment statement -->
+        <div class="ica-principles">
+            <i class="fas fa-globe-americas" style="font-size: 1.6rem; opacity: 0.8;"></i>
+            <p><strong>Inspired by the International Co-operative Alliance (ICA)</strong> — Our values honour the seven cooperative principles: voluntary & open membership, democratic member control, member economic participation, autonomy & independence, education & training, cooperation among cooperatives, and concern for community. La Flora CCU unites ICA ethics with local purpose.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Objectives Section (Annex 1) -->
+<section class="section" id="objectives">
+    <div class="container">
+        <div class="section-title">Main Objectives</div>
+        <div class="objectives-list">
+            <div class="obj-item">
+                <i class="fas fa-coins"></i>
+                <p><strong>Encourage thrift and savings</strong> and provide loan facilities to its members.</p>
+            </div>
+            <div class="obj-item">
+                <i class="fas fa-percent"></i>
+                <p><strong>Create a source of credit for provident and productive purposes</strong> and provide loans at reasonable rate of interest.</p>
+            </div>
+            <div class="obj-item">
+                <i class="fas fa-hand-peace"></i>
+                <p><strong>Provide opportunity for members to use and control their money for their mutual benefit.</strong></p>
+            </div>
+            <div class="obj-item">
+                <i class="fas fa-chart-simple"></i>
+                <p><strong>Raise funds by issuing shares, contracting loans, receiving deposits from members</strong> and accept donations from different sources.</p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.85rem; background: #eef1e9; padding: 1rem; border-radius: 2rem;">
+            <i class="fas fa-file-alt"></i> Annex I — Formal objectives of La Flora Co-operative Credit Union Limited
+        </div>
+    </div>
+</section>
+
+<!-- extra section: 55 years legacy + digital bridge -->
+<section style="background: var(--cream); padding: 2.5rem 0; text-align: center;">
+    <div class="container">
+        <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--forest); margin-bottom: 0.5rem; display: inline-block;"></i>
+        <h3 style="font-size: 1.8rem; font-family: 'Playfair Display'; color: #1f4629;">55 years of cooperative excellence</h3>
+        <p style="max-width: 600px; margin: 0.8rem auto;">Our journey honours the past while innovating for tomorrow. We remain rooted in member trust and ethical finance.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <i class="fas fa-seedling" style="font-size: 1.8rem; margin-bottom: 0.5rem; opacity: 0.8;"></i>
+        <p><strong>La Flora Co-operative Credit Union Limited</strong> — Growing together since 1971</p>
+        <p>📍 Seat of society: Royal Road, La Flora | 📞 Contact Mr. Parmesswar Matoo (Mobile Number: 57794775) | ✉️ lafloraccu@gmail.com</p>
+        <p style="margin-top: 1rem; font-size: 0.7rem;">© 2026 La Flora CCU. Serving members with honesty, innovation, and heart.</p>
+        <p style="font-size: 0.7rem;">Aligning with the International Co-operative Alliance values: Self-help, Self-responsibility, Democracy, Equality, Equity, Solidarity, Honesty, Openness, Social Responsibility, Caring for Others.</p>
+    </div>
+</footer>
+</body>
+</html>
